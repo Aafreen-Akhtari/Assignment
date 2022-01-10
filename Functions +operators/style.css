@@ -1,0 +1,25 @@
+body {
+  background-color: blanchedalmond;
+}
+.main {
+  position: fixed;
+  top: 50%;
+  width: 40%;
+  left: 40%;
+}
+.input,
+.submit {
+  padding: 2%;
+  border-radius: 20px;
+}
+.submit {
+  background-color: greenyellow;
+}
+.submit:hover ,.submit:focus{
+  background-color: green;
+}
+.input {
+  background-color: rgb(152, 240, 235);
+  border: 2px solid green;
+}
+.input:focus{background-color:rgb(255, 233, 137);}

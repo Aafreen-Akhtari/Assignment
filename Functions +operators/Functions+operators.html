@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Assignment about Operators, Functions, Condition,Events</title>
+  </head>
+  <body>
+    <div class="main">
+      <input
+        type="text"
+        class="input"
+        placeholder="Enter the amount"
+        required
+      />
+      <button class="submit" class="submit" onclick="check()">Submit</button>
+    </div>
+    <script>
+      function check() {
+        const grocery = 20;
+        const icecream = 15;
+        const total = grocery + icecream;
+        let amount = parseFloat(document.querySelector("input").value);
+        if (amount >= total) {
+          alert(
+            `Superb! ASHISH bought grocery as well as ice cream and have ${
+              (total - amount) * -1
+            }rs left`
+          );
+        } else if (amount >= grocery && amount < total) {
+          alert(
+            `ASHISH can only buy grocery and the remaining amount is ${
+              amount - grocery
+            }rs`
+          );
+        } else if (amount < grocery && amount >= icecream) {
+          alert(
+            `ASHISH can't buy grocery but can buy ice cream and the remaining amount is ${
+              amount - icecream
+            }rs`
+          );
+        } else if (amount < icecream) {
+          alert(
+            `ASHISH don't have enough money to buy grocery as well as icecream he need ${
+              grocery - amount
+            }rs more to buy grocery and ${icecream - amount}rs to buy icecream`
+          );
+        } else {
+          alert("Enter amount please....");
+        }
+      }
+    </script>
+  </body>
+</html>
