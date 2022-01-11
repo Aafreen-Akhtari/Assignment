@@ -7,16 +7,14 @@
     <title>Assignment about object creation and priniting.</title>
   </head>
   <body>
-    <div class="print" id="print">
-
-    </div>
+    <div class="print" id="print"></div>
     <script>
       var aafreen = {
         first_name: "Aafreen",
-        last_name:"Akhtari",
+        last_name: "Akhtari",
         designation: "Intern",
-        age: 20, 
-        contact:8055705560,
+        age: 20,
+        contact: 8055705560,
         address: {
           area: "Manav Seva Nagar",
           pincode: 440006,
@@ -24,8 +22,25 @@
           state: "Maharashtra",
         },
       };
-      document.querySelector('#print').innerHTML = "First name : "+ aafreen.first_name+"<br>Last Name : "+aafreen.last_name+"<br>Designation : "+aafreen.designation+"<br>Age : "+aafreen.age+"<br>Contact : "+aafreen.contact+"<br>Address : "+aafreen.address.area+" "+aafreen.address.city+" "+aafreen.address.pincode+" "+aafreen.address.state;
-      
+      document.querySelector("#print").innerHTML =
+        "First name : " +
+        aafreen.first_name +
+        "<br>Last Name : " +
+        aafreen.last_name +
+        "<br>Designation : " +
+        aafreen.designation +
+        "<br>Age : " +
+        aafreen.age +
+        "<br>Contact : " +
+        aafreen.contact +
+        "<br>Address : " +
+        aafreen.address.area +
+        " " +
+        aafreen.address.city +
+        " " +
+        aafreen.address.pincode +
+        " " +
+        aafreen.address.state;
     </script>
   </body>
 </html>
