@@ -1,0 +1,21 @@
+
+/* CSS for Assignment about String and its methods */
+input {
+  padding: 5px;
+}
+label {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: darkgreen;
+}
+form {
+  width: 90px;
+  margin: auto;
+}
+#submit {
+  width: 55px;
+  padding: 8px;
+  margin-top: 3px;
+
+ background-color: green;
+}

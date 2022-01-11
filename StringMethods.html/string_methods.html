@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment about String and its methods</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form onsubmit="testVariable();return false">
+      <label>Email :</label
+      ><input type="email" id="email" placeholder="Enter Email" /><br />
+      <label>First Name :</label
+      ><input
+        type="text"
+        id="fname"
+        placeholder="Enter Your First Name"
+      /><br />
+      <label>Last Name :</label
+      ><input type="text" id="lname" placeholder="Enter Your Last Name" /><br />
+      <label>Age :</label
+      ><input type="Age" id="age" placeholder="Enter Your Age" /><br />
+      <input type="submit" value="submit" id="submit" />
+    </form>
+    <table id="table"></table>
+
+    <script>
+      function testVariable() {
+        debugger;
+        let email = document.getElementById("email").value;
+        let FirstName = document.getElementById("fname").value;
+        let LastName = document.getElementById("lname").value;
+        let age = document.getElementById("age").value;
+        let Person_Type = age < 11 ? "Kid" : "Genius";
+        let FullName =
+          FirstName.charAt(0).toUpperCase() +
+          FirstName.slice(1) +
+          LastName.charAt(0).toUpperCase() +
+          LastName.slice(1);
+        alert("The entered details Are :");
+
+        document.getElementById("table").innerHTML =
+          "<tr><th>Full Name</th><th>Email ID</th><th>Age</th><th>Person Type</th></tr><tr><td>" +
+          FullName +
+          "</td><td>" +
+          email +
+          "</td><td>" +
+          age +
+          "</td><td>" +
+          Person_Type +
+          "</td></tr>";
+      }
+    </script>
+  </body>
+</html>
