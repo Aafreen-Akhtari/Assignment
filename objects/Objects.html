@@ -5,21 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment about object creation and priniting.</title>
+  </head>
+  <body>
+    <div class="print" id="print">
+
+    </div>
     <script>
-      var Aafreen = {
-        Name: "Aafreen",
-        Designation: "Intern",
-        Age: 20, 
-        Contact:8055705560,
-        Address: {
-          Area: "Manav seva nagar",
-          Pincode: 440006,
-          City: "nagpur",
-          State: "maharashtra",
+      var aafreen = {
+        first_name: "Aafreen",
+        last_name:"Akhtari",
+        designation: "Intern",
+        age: 20, 
+        contact:8055705560,
+        address: {
+          area: "Manav Seva Nagar",
+          pincode: 440006,
+          city: "Nagpur",
+          state: "Maharashtra",
         },
       };
-      console.log(Aafreen);
+      document.querySelector('#print').innerHTML = "First name : "+ aafreen.first_name+"<br>Last Name : "+aafreen.last_name+"<br>Designation : "+aafreen.designation+"<br>Age : "+aafreen.age+"<br>Contact : "+aafreen.contact+"<br>Address : "+aafreen.address.area+" "+aafreen.address.city+" "+aafreen.address.pincode+" "+aafreen.address.state;
+      
     </script>
-  </head>
-  <body></body>
+  </body>
 </html>
