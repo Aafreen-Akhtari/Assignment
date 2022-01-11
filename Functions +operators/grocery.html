@@ -35,20 +35,12 @@
               amount - grocery
             }rs`
           );
-        } else if (amount < grocery && amount >= icecream) {
-          alert(
-            `ASHISH can't buy grocery but can buy ice cream and the remaining amount is ${
-              amount - icecream
-            }rs`
-          );
-        } else if (amount < icecream) {
+        } else{
           alert(
             `ASHISH don't have enough money to buy grocery as well as icecream he need ${
               grocery - amount
             }rs more to buy grocery and ${icecream - amount}rs to buy icecream`
           );
-        } else {
-          alert("Enter amount please....");
         }
       }
     </script>
