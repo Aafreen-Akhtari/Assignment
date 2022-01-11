@@ -8,15 +8,18 @@
     <title>Assignment about Operators, Functions, Condition,Events</title>
   </head>
   <body>
-    <div class="main">
-      <input
-        type="text"
-        class="input"
-        placeholder="Enter the amount"
-        required
-      />
-      <button class="submit" class="submit" onclick="check()">Submit</button>
-    </div>
+    <form action="" onsubmit="check()">
+      <div class="main">
+        <input
+          type="text"
+          class="input"
+          placeholder="Enter the amount"
+          required
+        />
+        <button class="submit" class="submit" value="submit">Submit</button>
+      </div>
+    </form>
+    
     <script>
       function check() {
         const grocery = 20;
