@@ -59,20 +59,16 @@
     <script>
       $(document).ready(function () {
         $(".flip1").click(function () {
-          $(".panel2").hide();
-          $(".panel3").hide();
+          $(".panel2 ,.panel3").hide();
           $(".panel1").slideToggle("slow");
         });
         $(".flip2").click(function () {
-          $(".panel1").hide();
-          $(".panel3").hide();
-
+          $(".panel1,.panel3").hide();
           $(".panel2").slideToggle("slow");
         });
         $(".flip3").click(function () {
           $(".panel3").slideToggle("slow");
-          $(".panel1").hide();
-          $(".panel2").hide();
+          $(".panel1,.panel2").hide();
         });
       });
     </script>
