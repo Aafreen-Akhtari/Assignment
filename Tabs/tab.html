@@ -2,12 +2,41 @@
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".flip1").click(function () {
+          $(".panel2").hide();
+          $(".panel3").hide();
+          $(".panel1").slideToggle("slow");
+        });
+        $(".flip2").click(function () {
+          $(".panel1").hide();
+          $(".panel3").hide();
 
+          $(".panel2").slideToggle("slow");
+        });
+        $(".flip3").click(function () {
+          $(".panel3").slideToggle("slow");
+          $(".panel1").hide();
+          $(".panel2").hide();
+        });
+        $(window).on('resize', function() {
+    if($(window).width() > 600) {
+        $('#body').addClass('limit1200');
+        $('#body').removeClass('limit400');
+    }
+    else {
+        $('#body').addClass('limit400');
+        $('#body').removeClass('limit1200');
+    }
+})
+      });
+    </script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Vertical Tabs -->
-    <div class="float">
+    <div class="float" id="ter">
       <h1 class="center">Vertical Tabs</h1>
       <div id="flip" class="flip1">Click to slide the panel-1 down or up</div>
       <div id="panel" class="panel1">This is a panel-1</div>
@@ -18,7 +47,7 @@
     </div>
 
     <!-- Horizontal Tabs -->
-    <div class="float">
+    <div class="float" id="ter">
       <h1 class="center">Horizontal Tabs</h1>
       <ul id="tabs">
         <li class="tab1 active" rel="page1"><a href="page1">Tab1</a></li>
@@ -51,38 +80,10 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
             nisi natus eligendi quis temporibus consectetur, commodi dolor
             fugiat, at quo ab corporis? Itaque doloremque perferendis rerum nam
-            suscipit repudiandae. At.at.
+            suscipit repudiandae. At.
           </p>
         </div>
       </div>
     </div>
-    <script>
-      $(document).ready(function () {
-        // vertical tabs
-        $(".flip1").click(function () {
-          $(".panel2").hide();
-          $(".panel3").hide();
-          $(".panel1").slideToggle("slow");
-        });
-        $(".flip2").click(function () {
-          $(".panel1").hide();
-          $(".panel3").hide();
-
-          $(".panel2").slideToggle("slow");
-        });
-        $(".flip3").click(function () {
-          $(".panel3").slideToggle("slow");
-          $(".panel1").hide();
-          $(".panel2").hide();
-        });
-        // Horizontal Tab
-        $("#tabs li").click(function () {
-          var tabid = $(this).attr("rel");
-          $(".page").hide();
-          $("#" + tabid).show();
-          return false;
-        });
-      });
-    </script>
   </body>
 </html>
