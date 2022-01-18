@@ -1,0 +1,100 @@
+body {
+  background: #444;
+  box-sizing: border-box;
+}
+#tabs {
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#tabs li {
+  float: left;
+  margin: 0 0.5em 0 0;
+}
+
+#tabs a {
+  position: relative;
+  background: #ddd;
+  background-image: linear-gradient(to bottom, #fff, #ddd);
+  padding: 0.7em 3.5em;
+  float: left;
+  text-decoration: none;
+  color: #444;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  border-radius: 5px 0 0 0;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+#tabs a:hover,
+#tabs a:hover::after,
+#tabs a:focus,
+#tabs a:focus::after {
+  background: #fff;
+}
+.active {
+  background-color: white;
+}
+
+#tabs a:focus {
+  outline: 0;
+}
+
+#tabs a::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: -0.5em;
+  bottom: 0;
+  width: 1em;
+  background: #ddd;
+  background-image: linear-gradient(to bottom, #fff, #ddd);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  transform: skew(10deg);
+  border-radius: 0 5px 0 0;
+}
+
+#tabs #current a,
+#tabs #current a::after {
+  background: #fff;
+  z-index: 3;
+}
+
+#content {
+  background: #fff;
+  padding: 2em;
+  height: 220px;
+  position: relative;
+  z-index: 2;
+  border-radius: 0 5px 5px 5px;
+  box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, 0.5);
+}
+.float {
+  float: left;
+  width: 48%;
+  margin: 1%;
+}
+#panel,
+#flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+  cursor: pointer;
+}
+.page {
+  display: none;
+}
+#panel {
+  padding: 50px 5px;
+  display: none;
+  background-color: aquamarine;
+}
+.center {
+  text-align: center;
+  color: rgb(255, 127, 127);
+  text-decoration: underline;
+}
