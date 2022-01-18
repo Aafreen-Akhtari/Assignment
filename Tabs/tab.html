@@ -2,37 +2,8 @@
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".flip1").click(function () {
-          $(".panel2").hide();
-          $(".panel3").hide();
-          $(".panel1").slideToggle("slow");
-        });
-        $(".flip2").click(function () {
-          $(".panel1").hide();
-          $(".panel3").hide();
 
-          $(".panel2").slideToggle("slow");
-        });
-        $(".flip3").click(function () {
-          $(".panel3").slideToggle("slow");
-          $(".panel1").hide();
-          $(".panel2").hide();
-        });
-      });
-
-      $(document).ready(function () {
-        
-        $("#tabs li").click(function () {
-          var tabid = $(this).attr("rel");
-          $(".page").hide();
-          $("#" + tabid).show();
-          return false;
-        });
-      });
-    </script>
-    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Vertical Tabs -->
@@ -85,5 +56,33 @@
         </div>
       </div>
     </div>
+    <script>
+      $(document).ready(function () {
+        // vertical tabs
+        $(".flip1").click(function () {
+          $(".panel2").hide();
+          $(".panel3").hide();
+          $(".panel1").slideToggle("slow");
+        });
+        $(".flip2").click(function () {
+          $(".panel1").hide();
+          $(".panel3").hide();
+
+          $(".panel2").slideToggle("slow");
+        });
+        $(".flip3").click(function () {
+          $(".panel3").slideToggle("slow");
+          $(".panel1").hide();
+          $(".panel2").hide();
+        });
+        // Horizontal Tab
+        $("#tabs li").click(function () {
+          var tabid = $(this).attr("rel");
+          $(".page").hide();
+          $("#" + tabid).show();
+          return false;
+        });
+      });
+    </script>
   </body>
 </html>
