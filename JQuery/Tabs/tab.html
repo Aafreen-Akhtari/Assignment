@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".flip1").click(function () {
+          $(".panel2").hide();
+          $(".panel3").hide();
+          $(".panel1").slideToggle("slow");
+        });
+        $(".flip2").click(function () {
+          $(".panel1").hide();
+          $(".panel3").hide();
+
+          $(".panel2").slideToggle("slow");
+        });
+        $(".flip3").click(function () {
+          $(".panel3").slideToggle("slow");
+          $(".panel1").hide();
+          $(".panel2").hide();
+        });
+      });
+
+      $(document).ready(function () {
+        
+        $("#tabs li").click(function () {
+          var tabid = $(this).attr("rel");
+          $(".page").hide();
+          $("#" + tabid).show();
+          return false;
+        });
+      });
+    </script>
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <!-- Vertical Tabs -->
+    <div class="float">
+      <h1 class="center">Vertical Tabs</h1>
+      <div id="flip" class="flip1">Click to slide the panel-1 down or up</div>
+      <div id="panel" class="panel1">This is a panel-1</div>
+      <div id="flip" class="flip2">Click to slide the panel-2 down or up</div>
+      <div id="panel" class="panel2">This is a panel-2</div>
+      <div id="flip" class="flip3">Click to slide the panel-3 down or up</div>
+      <div id="panel" class="panel3">This is a panel-3</div>
+    </div>
+
+    <!-- Horizontal Tabs -->
+    <div class="float">
+      <h1 class="center">Horizontal Tabs</h1>
+      <ul id="tabs">
+        <li class="tab1 active" rel="page1"><a href="page1">Tab1</a></li>
+        <li class="tab2" rel="page2"><a href="page2">Tab2</a></li>
+        <li class="tab3" rel="page3"><a href="page3">Tab3</a></li>
+      </ul>
+
+      <div id="content">
+        <div class="page" id="page1">
+          <h2>This is page 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+            nisi natus eligendi quis temporibus consectetur, commodi dolor
+            fugiat, at quo ab corporis? Itaque doloremque perferendis rerum nam
+            suscipit repudiandae. At.
+          </p>
+        </div>
+        <div class="page" id="page2">
+          <h2>This is page 2</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+            nisi natus eligendi quis temporibus consectetur, commodi dolor
+            fugiat, at quo ab corporis? Itaque doloremque perferendis rerum nam
+            suscipit repudiandae. At.
+          </p>
+        </div>
+        <div class="page" id="page3">
+          <h2>This is page 3</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+            nisi natus eligendi quis temporibus consectetur, commodi dolor
+            fugiat, at quo ab corporis? Itaque doloremque perferendis rerum nam
+            suscipit repudiandae. At.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
