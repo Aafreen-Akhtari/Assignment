@@ -97,6 +97,7 @@ body {
   text-decoration: underline;
 }
 .clearfix:after {
+  
   content: "";
 
   display: block;
