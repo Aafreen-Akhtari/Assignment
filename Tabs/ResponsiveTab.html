@@ -57,22 +57,19 @@
         });
         $(window).resize(function () {
           var width = $(window).width();
-          if (width < 1200) {
-            $("#tabs a").css({"padding": "0.7em 10.5em"})
+          if (width < 1000) {
+            $("#tabs a").css({ padding: "0.7em 10.5em", float: "none" });
             $("#tabs li").css("margin", "23px 0px 10px 0px");
-            $("#tabs a").css("float", "none");
-            
             $("#content").hide();
             $("#tabs li").click(function () {
-                var tabid = $(this).attr("rel");
-                $("#content").show();
-                $("#" + tabid).show();
-                return false;
-              });
+              var tabid = $(this).attr("rel");
+              $("#content").show();
+              $("#" + tabid).show();
+              return false;
+            });
           } else {
-            $("#tabs a").css({"padding": "0.7em 3.5em"})
-            $("#tabs li").css("margin", "0px");
-            $("#tabs a").css("float", "left");
+            $("#tabs a").css({ padding: "0.7em 3.5em", float: "left" });
+            $("#tabs li").css("margin", "0px");     
             $("#content").show();
             return false;
           }
