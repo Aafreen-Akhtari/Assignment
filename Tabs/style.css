@@ -1,5 +1,5 @@
 body {
-  background: #444;
+  background: #eef9ff;
   box-sizing: border-box;
 }
 #tabs {
@@ -11,7 +11,6 @@ body {
 }
 
 #tabs li {
-  float: left;
   margin: 0 0.5em 0 0;
 }
 
@@ -35,7 +34,7 @@ body {
   background: #fff;
 }
 .active {
-  background-color: white;
+  background: #fff;
 }
 
 #tabs a:focus {
@@ -63,7 +62,7 @@ body {
   z-index: 3;
 }
 
-#content {
+#content,#fliper {
   background: #fff;
   padding: 2em;
   height: 220px;
@@ -72,18 +71,18 @@ body {
   border-radius: 0 5px 5px 5px;
   box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, 0.5);
 }
-.float {
-  float: left;
+.width {
   width: 48%;
-  margin: 1%;
+  margin: auto;
 }
 #panel,
 #flip {
   padding: 5px;
   text-align: center;
-  background-color: #e5eecc;
+  background-color: #00aadd;
   border: solid 1px #c3c3c3;
   cursor: pointer;
+  font-size: large;
 }
 .page {
   display: none;
@@ -91,10 +90,16 @@ body {
 #panel {
   padding: 50px 5px;
   display: none;
-  background-color: aquamarine;
+  background-color: #fff;
 }
 .center {
   text-align: center;
-  color: rgb(255, 127, 127);
   text-decoration: underline;
+}
+.clearfix:after {
+  content: "";
+
+  display: block;
+
+  clear: both;
 }
