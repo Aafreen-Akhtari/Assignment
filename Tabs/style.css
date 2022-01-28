@@ -62,7 +62,8 @@ body {
   z-index: 3;
 }
 
-#content,#fliper {
+#content,
+#fliper {
   background: #fff;
   padding: 2em;
   height: 220px;
@@ -97,7 +98,6 @@ body {
   text-decoration: underline;
 }
 .clearfix:after {
-  
   content: "";
 
   display: block;
