@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="target">
+      <h1>Click on image to show the popup</h1>
+      <img src="green.jpg" alt="" height="400px" width="400px" />
+    </div>
+    <div class="content">
+      <div id="popup">
+        <div class="box">
+          <img src="green.jpg" id="zoomimgage" class="popupImage" alt="" height="400px" width="400px" />
+        </div>
+        <button class="closeBtn">X</button>
+        <button class="zoom plus">&plus;</button>
+        <button class="zoom minus">&minus;</button>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var total = $("img").width() + $("img").height();
+
+        $(".target").click(function () {
+          $(".content").toggle();
+          $(".target").hide();
+        });
+      
+        $(".closeBtn").click(function () {
+         $(".content").hide()
+          $(".target").show();
+        });
+        // function for zoom in
+        $(".plus").click(function () {
+          var GFG = document.getElementById("zoomimgage");
+          var currHeight = GFG.clientHeight;
+          var currWidth = GFG.clientWidth;
+          if (currHeight + currWidth + 100 <= 2000) {
+            GFG.style.height = currHeight + 100 + "px";
+            GFG.style.width = currWidth + 100 + "px";
+          }
+        });
+        // function for zoom out
+        $(".minus").click(function () {
+          var GFG = document.getElementById("zoomimgage");
+          var currHeight = GFG.clientHeight;
+          var currWidth = GFG.clientWidth;
+          if (currHeight + currWidth - 100 > total) {
+            GFG.style.height = currHeight - 100 + "px";
+            GFG.style.width = currWidth - 100 + "px";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
