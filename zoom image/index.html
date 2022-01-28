@@ -13,7 +13,14 @@
     <div class="content">
       <div id="popup">
         <div class="box">
-          <img src="green.jpg" id="zoomimgage" class="popupImage" alt="" height="400px" width="400px" />
+          <img
+            src="green.jpg"
+            id="zoomimgage"
+            class="popupImage"
+            alt=""
+            height="400px"
+            width="400px"
+          />
         </div>
         <button class="closeBtn">X</button>
         <button class="zoom plus">&plus;</button>
@@ -29,9 +36,9 @@
           $(".content").toggle();
           $(".target").hide();
         });
-      
+
         $(".closeBtn").click(function () {
-         $(".content").hide()
+          $(".content").hide();
           $(".target").show();
         });
         // function for zoom in
