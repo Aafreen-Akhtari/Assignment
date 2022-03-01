@@ -1,0 +1,76 @@
+.center {
+  text-align: center;
+}
+h3 {
+  text-decoration: underline;
+  color: crimson;
+}
+ul li {
+  list-style-type: none;
+}
+/* Assignment point 1 :ul li structure and give different colors to 2nd, 4th, 6th, 8th rows text using nth-child. */
+.DifferentColorOnEvenRow li:nth-child(2) {
+  color: rgb(117, 24, 143);
+}
+.DifferentColorOnEvenRow li:nth-child(4) {
+  color: rgb(12, 137, 151);
+}
+.DifferentColorOnEvenRow li:nth-child(6) {
+  color: rgb(6, 9, 141);
+}
+.DifferentColorOnEvenRow li:nth-child(8) {
+  color: rgb(10, 177, 10);
+}
+
+/* Assignment point 2 : ul li of five links with blue color and change third link by red color */
+
+.RedThirdLink li:nth-child(3) a {
+  color: red;
+}
+/* Assignment point 3 : five paragraph with black text and give last paragraph with some background color. */
+.FifthParaWithBgColor p:last-child {
+  background-color: yellow;
+}
+/* Assignment point 4 : Table structure and provide background color to alternate row. Odd row white and even row grey color. */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid black;
+}
+tr:nth-child(even) {
+  background-color: gray;
+}
+/* Assignment point 5 : Before and After Effect */
+.BeforeAfter {
+  padding: 34px;
+}
+.BeforeAfter a:hover::before {
+  content: "Before -";
+  background-color: rgb(255, 237, 74);
+}
+.BeforeAfter a:hover::after {
+  content: "-After";
+  background-color: rgb(118, 255, 118);
+}
+/* Assignment point 6 : a link with ‘Click me’ text and change its color on hover with underline, also give focus and active and give different colors on each. */
+.LinkEffects a {
+  text-decoration: none;
+  padding: 5px;
+}
+.LinkEffects a:hover {
+  text-decoration: underline;
+  color: rgb(255, 0, 170);
+}
+.LinkEffects a:focus {
+  background-color: rgb(51, 246, 51);
+  color: red;
+}
+.LinkEffects a:active {
+  color: rgb(206, 8, 140);
+}
