@@ -1,0 +1,20 @@
+body{
+    background-color: #f1f5f8;
+}
+.center{
+top: 50%;
+margin: auto;
+width: 50%;
+text-align: center;
+color: #102a42;
+}
+#value{
+font-size: 50px;
+margin: 34px;
+}
+.btn{
+  margin: 15px;
+  padding: 8px;
+  text-transform: uppercase;
+  border:2px solid #102a42;
+}
