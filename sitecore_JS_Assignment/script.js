@@ -3,59 +3,67 @@ var subBtn = document.querySelector("#sub");
 var mulBtn = document.querySelector("#mul");
 var divBtn = document.querySelector("#div");
 var clearBtn = document.querySelector("#btnClear");
+var emptyInput = document.querySelector(".emptyInput");
+let input1 = document.getElementById("num1");
+let input2 = document.getElementById("num2");
 const inputHandler = () => {
-  if (num1.value === "" || num2.value === "") {
-    num1.classList.add("err");
-    num2.classList.add("err");
-    alert("Please enter two number values....!");
+  if (input1.value.trim() === "") {
+    input1.classList.add("err-border");
+    emptyInput.classList.remove("emptyInput");
   }
-  num1.addEventListener("change", () => {
-    num1.classList.remove("err");
+  if( input2.value.trim() === ""){
+    input2.classList.add("err-border");
+    emptyInput.classList.remove("emptyInput");
+  }
+  input1.addEventListener("change", () => {
+    input1.classList.remove("err-border");
+    emptyInput.classList.add("emptyInput");
   });
-  num2.addEventListener("change", () => {
-    num2.classList.remove("err");
+  input2.addEventListener("change", () => {
+    input2.classList.remove("err-border");
+    emptyInput.classList.add("emptyInput");
   });
 };
 
-addBtn.addEventListener("click", () => {
-  debugger;
-  let num1 = document.getElementById("num1");
-  let num2 = document.getElementById("num2");
+const add = (number1, number2) => {
   inputHandler();
-  let result = parseFloat(num1.value) + parseFloat(num2.value);
-  document.getElementById("result").value = result;
+  let result = parseFloat(number1.value) + parseFloat(number2.value);
+  document.getElementById("result").innerHTML = result;
+};
+const substract = (number1, number2) => {
+  inputHandler();
+  let result = parseFloat(number1.value) - parseFloat(number2.value);
+  document.getElementById("result").innerHTML = result;
+};
+const multiply = (number1, number2) => {
+  inputHandler();
+  let result = parseFloat(number1.value) * parseFloat(number2.value);
+  document.getElementById("result").innerHTML = result;
+};
+const division = (number1, number2) => {
+  inputHandler();
+  let result = parseFloat(number1.value) / parseFloat(number2.value);
+  document.getElementById("result").innerHTML = result;
+};
+addBtn.addEventListener("click", () => {
+  add(input1, input2);
 });
 subBtn.addEventListener("click", () => {
-  debugger;
-  let num1 = parseFloat(document.getElementById("num1").value);
-  let num2 = parseFloat(document.getElementById("num2").value);
-  inputHandler();
-  let result = num1 - num2;
-  document.getElementById("result").value = result;
+  substract(input1, input2);
 });
 mulBtn.addEventListener("click", () => {
-  debugger;
-  let num1 = parseFloat(document.getElementById("num1").value);
-  let num2 = parseFloat(document.getElementById("num2").value);
-  inputHandler();
-  let result = num1 * num2;
-  document.getElementById("result").value = result;
+  multiply(input1, input2);
 });
 divBtn.addEventListener("click", () => {
-  debugger;
-  let num1 = parseFloat(document.getElementById("num1").value);
-  let num2 = parseFloat(document.getElementById("num2").value);
-  inputHandler();
-  let result = num1 / num2;
-  document.getElementById("result").value = result;
+  division(input1, input2);
 });
 clearBtn.addEventListener("click", () => {
-  debugger;
-  if((num1.classList.contains('err')) || (num2.classList.contains('err'))){
-    num1.classList.remove("err");
-    num2.classList.remove("err");
-  };
-  document.getElementById("num1").value = "";
-  document.getElementById("num2").value = "";
-  document.getElementById("result").value = "Result";
+  if (input1.classList.contains("err-border") || input2.classList.contains("err-border")) {
+    input1.classList.remove("err-border");
+    input2.classList.remove("err-border");
+    emptyInput.classList.add("emptyInput");
+  }
+  input1.value = "";
+  input2.value = "";
+  document.getElementById("result").innerHTML = "RESULT";
 });

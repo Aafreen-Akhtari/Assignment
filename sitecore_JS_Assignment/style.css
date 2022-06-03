@@ -6,24 +6,17 @@
   top: 120px;
   border-radius: 10px;
 }
-.err {
+.err-border {
   border: 1.5px double red;
 }
-h2{
-    padding-top: 20px;
+h2 {
+  padding-top: 20px;
 }
 input {
   width: 80%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-}
-input[type="reset"] {
-  border: none;
-  font-size: large;
-  font-weight: bold;
-  background-color: #3cbc8d;
-  color: white;
 }
 button {
   display: inline-block;
@@ -43,9 +36,33 @@ button:active {
   box-shadow: 0 4px #666;
   transform: translateY(4px);
 }
-.clear {
+.clear,
+#result {
   width: 50%;
+}
+#result {
+  padding: 8px;
+  color: #ffffff;
+  background: #4caf50;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10px auto;
 }
 .center {
   text-align: center;
+}
+.emptyInput {
+  display: none;
+}
+.errMsg {
+  color: red;
+  font-weight: bolder;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
 }
